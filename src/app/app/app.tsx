@@ -4,6 +4,8 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { styles } from "./styles";
 import { colors } from "@/styles/colors";
 
+import { Category } from "@/components/category/category";
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -14,6 +16,8 @@ export default function App() {
           <MaterialIcons name="add" size={32} color={colors.green[300]} />
         </TouchableOpacity>
       </View>
+
+      <Category />
     </View>
   );
 }
