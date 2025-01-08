@@ -4,7 +4,8 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { styles } from "./styles";
 import { colors } from "@/styles/colors";
 
-import { Categories } from "@/components/categories/categories";
+import { Categories } from "@/components/Categories/Categories";
+import { Link } from "@/components/Link/Link";
 
 export default function App() {
   return (
@@ -18,6 +19,12 @@ export default function App() {
       </View>
 
       <Categories />
+
+      <Link
+        name="google"
+        url="https://www.google.com/"
+        onDetails={() => console.log("clicou")}
+      />
     </View>
   );
 }
