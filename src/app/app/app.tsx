@@ -4,7 +4,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { styles } from "./styles";
 import { colors } from "@/styles/colors";
 
-import { Category } from "@/components/category/category";
+import { Categories } from "@/components/categories/categories";
 
 export default function App() {
   return (
@@ -17,9 +17,7 @@ export default function App() {
         </TouchableOpacity>
       </View>
 
-      <Category name="Projeto" icon="code" isSelected />
-      <Category name="Site" icon="language" isSelected={false} />
-      <Category name="Vídeo" icon="movie" isSelected={false} />
+      <Categories />
     </View>
   );
 }
