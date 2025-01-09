@@ -13,6 +13,7 @@ import { colors } from "@/styles/colors";
 
 import { Categories } from "@/components/Categories/Categories";
 import { Link } from "@/components/Link/Link";
+import { Option } from "@/components/Option/Option";
 
 export default function App() {
   return (
@@ -57,8 +58,12 @@ export default function App() {
             </View>
 
             <Text style={styles.modalLinkName}>Google</Text>
-
             <Text style={styles.modalUrl}>https://www.google.com/</Text>
+
+            <View style={styles.modalFooter}>
+              <Option name="Excluir" icon="delete" variant="secondary" />
+              <Option name="Abrir" icon="language" />
+            </View>
           </View>
         </View>
       </Modal>
