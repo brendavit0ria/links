@@ -7,6 +7,7 @@ import {
   Text,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { router } from "expo-router";
 
 import { styles } from "./styles";
 import { colors } from "@/styles/colors";
@@ -21,7 +22,7 @@ export default function App() {
       <View style={styles.header}>
         <Image source={require("@/assets/logo.png")} style={styles.logo} />
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => router.navigate("./add")}>
           <MaterialIcons name="add" size={32} color={colors.green[300]} />
         </TouchableOpacity>
       </View>
@@ -43,7 +44,7 @@ export default function App() {
         showsVerticalScrollIndicator={false}
       />
 
-      <Modal transparent visible>
+      <Modal transparent visible={false}>
         <View style={styles.modal}>
           <View style={styles.modalContent}>
             <View style={styles.modalHeader}>
