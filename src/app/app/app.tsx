@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   View,
   Image,
@@ -11,12 +12,15 @@ import { router } from "expo-router";
 
 import { styles } from "./styles";
 import { colors } from "@/styles/colors";
+import { categories } from "@/utils/categories";
 
 import { Categories } from "@/components/Categories/Categories";
 import { Link } from "@/components/Link/Link";
 import { Option } from "@/components/Option/Option";
 
 export default function App() {
+  const [category, setCategory] = useState(categories[0].name);
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -27,7 +31,7 @@ export default function App() {
         </TouchableOpacity>
       </View>
 
-      <Categories />
+      <Categories onChange={setCategory} selected={category} />
 
       <FlatList
         data={["1", "2", "3", "4", "5", "6"]}
